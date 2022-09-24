@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+Explain what the simple List component does?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    1)List component renders all the texts that are available(in json file) and display it as an unordered list using Map function.
+    2)displaying all texts,which are primarily in green colour.
+    3)on clicking on every single element(texts) present on the screen,onClickHandler function gets executed and it will trigger  'handleClick' function,it will set the value of selectedIndex as the index of list element that was clicked.
+    4)Then,BackgroundColor style will set the background color according to clicked event and the green colour will change to red colour for every element,and vice versa....
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+What problems / warnings are there with code?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+     1) onClick={onClickHandler(index)} ----arrow function is missing in onClick event! it should be like, onClick={()=>onClickHandler(index)}
+     2)useState hook should be defined with correct syntax.
+     3)item.text should have some values to display!
+     4)In WrappedListComponent.propTypes, array should be relaced with arrayOf and shapeOf shoud be replaced shape.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Please fix, optimize, and/or modify the component as much as you think is necessary.
 
-### `npm run build`
+    1)Content of items can be put inside one folder i.e.Itemdata/Data.js
+    2)we can put List component inside App.js and can pass items={items} as a props!,so in case if we want to add more child-components we can add that below List component.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
